@@ -68,7 +68,7 @@ function csLanguagesCategory() {
 
 let spaces = [];	// an array to hold underscored spaces
 let chosen;
-
+let answer = "";
 let count = 0;
 
 
@@ -79,10 +79,27 @@ function chooseCategory(num){
 	for (let i = 0; i < spaces.length; i++){
 		spaces[i] = "_ ";
 	}
-
+	for (let i = 0; i < chosen.length; i++){
+		answer += chosen[i];
+	}
+	printTries();
 	printspaces();
 }
 
+function guessAnswer(){
+	let f = document.guess_Answer;
+	let b = f.elements["input_answer"];
+	let guess = b.value.toUpperCase();
+	if (guess === answer){
+		window.alert("You guessed the right answer.  You win!")
+	}
+}
+
+function printTries(){
+	let tries = document.getElementById("tries");
+	let text_node = document.createTextNode("You have 6 tries, good luck!");
+	tries.appendChild(text_node);
+}
 
 // prints the guessfield
 function printspaces(){
@@ -122,7 +139,11 @@ let checkLetter = function(){
 		count++;	// increment count of wrong letters
 		let hangman = document.getElementById("hangman");
 		// change the image src of hangman element in HTML
-    	hangman.src = "http://www.writteninpencil.de/Projekte/Hangman/hangman" + count + ".png";
+		if(count > 6){
+			hangman.src = "http://www.writteninpencil.de/Projekte/Hangman/hangman0.png";
+		} else {
+    		hangman.src = "http://www.writteninpencil.de/Projekte/Hangman/hangman" + count + ".png";
+		}
 	}
 	
 	//checks if all letters have been found
@@ -135,13 +156,13 @@ let checkLetter = function(){
 	if(word_found){
 		window.alert("You win!");
 	}
-	if(count === 6){ //once you got six wrong letters, you lose
-		window.alert("Uh...I guess you're dead now.");
+
+	if(count > 6){ //once you got six wrong letters, you lose
+		window.alert("Uh...I guess you're dead now. The correct word was " + wAnswer);
 	}
 }
 
 function init(){
-	//printspaces();
 }
 window.onload = init;
 

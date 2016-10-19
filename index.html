@@ -21,8 +21,15 @@
 		<input name="ratebutton" type="button" value="Computer Languages" onClick="csLanguagesCategory()">
 	</form>
 
+	<p id = "tries"></p>
+
+	<form name = "guess_Answer">
+		<input name="input_answer" type="text" placeholder="Your Answer" size="15" maxlength="100">
+		<input name="guessbutton" type="button" value="Guess Answer" onClick="guessAnswer()">
+	</form>
+
 	<p id="guess_space"></p>
-	
+		
 	<form name="guess_form">
 		<input name="input_letter" type="text" size="5" maxlength="1">
 		<input name="ratebutton" type="button" value="Guess" onClick="checkLetter()">
