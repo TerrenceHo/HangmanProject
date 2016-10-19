@@ -1,29 +1,88 @@
-/*
-	Final solution to the Hangman game
-*/
 const dictionary = [
-["T", "R", "E", "E", "H", "O", "U", "S", "E"],
-  ["J","A","V","A","S","C","R","I","P","T"],
-  ["W","E","B","D","E","S","I","G","N"],
-  ["E","D","U","C","A","T","I","O","N"],
-  ["C","H","O","C","O","L","A","T","E"],
-  ["G","E","R","M","A","N","Y"],
-  ["J", "E", "N", "N", "I", "F", "E", "R"]
+	[
+		["A", "P", "P", "L", "E"],
+		["O", "R", "A", "N", "G", "E"],
+		["B", "A", "N", "A", "N", "A"],
+		["P", "E", "A", "R"],
+		["G", "R", "A", "P", "E"]
+	],
+
+	[
+		["R", "E", "D"],
+		["O", "R", "A", "N", "G", "E"],
+		["C", "Y", "A", "N", "I", "D", "E"],
+		["G", "R", "E", "E", "N"],
+		["P", "U", "R", "P", "L", "E"],
+		["B", "L", "A", "C", "K"],
+		["W", "H", "I", "T", "E"]
+	],
+
+	[
+		["B", "A", "S", "K", "E", "T", "B", "A", "L", "L"],
+		["T", "E", "N", "N", "I", "S"],
+		["G", "O", "L", "F"],
+		["S", "O", "C", "C", "E", "R"]
+	],
+
+	[
+		["O", "B", "A", "M", "A"],
+		["W", "A", "S", "H", "I", "N", "G", "T", "O", "N"],
+		["B", "U", "S", "H"]
+	],
+
+	[
+		["J", "A", "V", "A"],
+		["C", "+", "+"],
+		["P", "Y", "T", "H", "O", "N"],
+		["L", "I", "S", "P"]
+	]
 ]
 
-// Math.random() gives you any decimal from 0 (inclusive) to 1 (exclusive)
-// 	so take the full length of dictionary array to get every possible number
-let random = Math.floor((Math.random()*(dictionary.length)));
-console.log(random);
 
-let chosen = dictionary[random]; // the array word to guess will be chosen from the 2d array above
-let spaces = new Array(chosen.length);	// an array to hold underscored spaces
-let count = 0;	// count # of wrong guesses
+let category;
 
-// every letter in the word is symbolized by an underscore in the guessfield
-for (let i = 0; i < spaces.length; i++){
-	spaces[i] = "_ ";
+function fruitCategory() {
+	category = 0;
+	chooseCategory(category);
 }
+
+function colorCategory() {
+	category = 1;
+	chooseCategory(category);
+}
+
+function sportsCategory() {
+	category = 2;
+	chooseCategory(category);
+}
+
+function presidentCategory() {
+	category = 3;
+	chooseCategory(category);
+}
+
+function csLanguagesCategory() {
+	category = 4;
+	chooseCategory(category);
+}
+
+let spaces = [];	// an array to hold underscored spaces
+let chosen;
+
+let count = 0;
+
+
+function chooseCategory(num){
+	let random = Math.floor((Math.random()*(dictionary[num].length)));
+	chosen = dictionary[num][random];
+	spaces = Array(chosen.length);
+	for (let i = 0; i < spaces.length; i++){
+		spaces[i] = "_ ";
+	}
+
+	printspaces();
+}
+
 
 // prints the guessfield
 function printspaces(){
@@ -76,16 +135,13 @@ let checkLetter = function(){
 	if(word_found){
 		window.alert("You win!");
 	}
-	
-	//once you got six wrong letters, you lose
-	if(count === 6){
+	if(count === 6){ //once you got six wrong letters, you lose
 		window.alert("Uh...I guess you're dead now.");
 	}
 }
 
 function init(){
-	printspaces();
+	//printspaces();
 }
-// when window loads, run function init()
 window.onload = init;
 

@@ -6,11 +6,21 @@
 	<title>Hangman</title>
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script type="text/javascript" src="solution.js"></script>
+	<script type="text/javascript" src="hangman.js"></script>
 </head>
 
 <body>
 	<h1>Hangman <br>Your favorite classroom pastime returns!</h1>
+	<hr>
+	<h2>Choose a category</h2>
+	<form name = "choose_Category">
+		<input name="ratebutton" type="button" value="Fruits" onClick="fruitCategory()">
+		<input name="ratebutton" type="button" value="Colors" onClick="colorCategory()">
+		<input name="ratebutton" type="button" value="Sports" onClick="sportsCategory()">
+		<input name="ratebutton" type="button" value="Famous Presidents" onClick="presidentCategory()">
+		<input name="ratebutton" type="button" value="Computer Languages" onClick="csLanguagesCategory()">
+	</form>
+
 	<p id="guess_space"></p>
 	
 	<form name="guess_form">
