@@ -7,12 +7,23 @@
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script type="text/javascript" src="hangman.js"></script>
+	<!-- <script>
+			let answer_Box = document.getElementById("answerBox");
+			let answer_BoxEnter = document.getElementById("answerBoxEnter");
+
+			answer_Box.addEventListener("keypress", function(event) {
+				event.preventDefault();
+				if (event.keyCode == 13) {
+    				answer_BoxEnter.click();
+				}
+			});
+		</script> -->
 </head>
 
 <body>
 	<h1>Hangman <br>Your favorite classroom pastime returns!</h1>
 	<hr>
-	<h2>Choose a category</h2>
+	<h2>Choose A Category To Play</h2>
 	<form name = "choose_Category">
 		<input name="ratebutton" type="button" value="Fruits" onClick="fruitCategory()">
 		<input name="ratebutton" type="button" value="Colors" onClick="colorCategory()">
@@ -23,19 +34,26 @@
 
 	<p id = "tries"></p>
 
-	<form name = "guess_Answer">
-		<input name="input_answer" type="text" placeholder="Your Answer" size="15" maxlength="100">
-		<input name="guessbutton" type="button" value="Guess Answer" onClick="guessAnswer()">
-	</form>
+	
 
 	<p id="guess_space"></p>
 		
 	<form name="guess_form">
-		<input name="input_letter" type="text" size="5" maxlength="1">
-		<input name="ratebutton" type="button" value="Guess" onClick="checkLetter()">
+		<input name="input_letter" type="text" placeholder="Guess Letter" size="5" maxlength="1">
+		<input name="ratebutton" type="button" value="Guess" onClick="checkLetter()"><br>
+		<p></p>
+		<input id = "answerBox" name="input_answer"  type="text" placeholder="Your Answer" size="15" maxlength="100">
+		<input id = "answerBoxEnter" name="guessbutton" type="button" value="Guess Answer" onClick="guessAnswer()">
 		<p id="wrong_letters">Wrong Letters:</p>
-		<img src="http://www.writteninpencil.de/Projekte/Hangman/hangman0.png" id="hangman"><br />
+		<img src="http://www.writteninpencil.de/Projekte/Hangman/hangman0.png" width = 200px height = 300px id="hangman"><br>
+		<p></p>
 		<input name="refresh" type="button" value="New Game" onClick="location.reload()">
 	</form>
+
+	<p></p>
+	<form name = "guess_Answer">
+	<p></p>
+	</form>
+	<p class = "text-center">Copyright © 2016 Terrence Ho</p>
 </body>
 </html>
