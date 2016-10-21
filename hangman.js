@@ -4,30 +4,81 @@ const dictionary = [
 		["O", "R", "A", "N", "G", "E"],
 		["B", "A", "N", "A", "N", "A"],
 		["P", "E", "A", "R"],
-		["G", "R", "A", "P", "E"]
+		["G", "R", "A", "P", "E"],
+		["C", "R", "A", "N", "B", "E", "R", "R", "Y"],
+		["W", "A", "T", "E", "R", "M", "E", "L", "O", "N"],
+		["A", "P", "R", "I", "C", "O", "T"],
+		["A", "V", "A", "C", "A", "D", "O"],
+		["P", "E", "A", "C", "H"],
+		["R", "A", "S", "P", "B", "E", "R", "R", "Y"],
+		["G", "U", "A", "V", "A"],
+		["M", "A", "N", "G", "O"],
+		["D", "A", "T", "E"],
+		["L", "E", "M", "O", "N"],
+		["P", "O", "M", "E", "G", "R", "A", "N", "A", "T", "E"]
+
 	],
 
 	[
 		["R", "E", "D"],
 		["O", "R", "A", "N", "G", "E"],
 		["C", "Y", "A", "N", "I", "D", "E"],
+		["Y", "E", "L", "L", "O", "W"],
 		["G", "R", "E", "E", "N"],
 		["P", "U", "R", "P", "L", "E"],
 		["B", "L", "A", "C", "K"],
-		["W", "H", "I", "T", "E"]
+		["W", "H", "I", "T", "E"],
+		["B", "L", "U", "E"],
+		["M", "A", "G", "E", "N", "T", "A"],	
+		["G", "O", "L", "D"],
+		["S", "I", "L", "V", "E", "R"],
+		["L", "I", "M", "E"],
+		["C", "H", "O", "C", "O", "L", "A", "T", "E"],
+		["A", "Q", "U", "A"]
 	],
 
 	[
 		["B", "A", "S", "K", "E", "T", "B", "A", "L", "L"],
 		["T", "E", "N", "N", "I", "S"],
 		["G", "O", "L", "F"],
-		["S", "O", "C", "C", "E", "R"]
+		["S", "O", "C", "C", "E", "R"],
+		["B", "O", "W", "L", "I", "N", "G"],
+		["B", "A", "D", "M", "I", "N", "T", "O", "N"],
+		["V", "O", "L", "L", "E", "Y", "B", "A", "L", "L"],
+		["B", "O", "X", "I", "N", "G"],
+		["R", "O", "W", "I", "N", "G"],
+		["S", "U", "R", "F", "I", "N", "G"],
+		["R", "U", "N", "N", "I", "N", "G"],
+		["H", "O", "C", "K", "E", "Y"],
+		["B", "A", "S", "E", "B", "A", "L", "L"],
+		["F", "O", "O", "T", "B", "A", "L", "L"],
+		["R", "U", "G", "B", "Y"],
+		["A", "R", "C", "H", "E", "R", "Y"],
+		["C", "R", "I", "C", "K", "E", "T"],
+		["S", "N", "O", "W", "B", "O", "A", "R", "D", "I", "N", "G"],
+		["D", "O", "D", "G", "E", "B", "A", "L", "L"],
+		["B", "I", "K", "I", "N", "G"],
+		["E", "S", "P", "O", "R", "T", "S"],
+		["U", "L", "T", "I", "M", "A", "T", "E"]
 	],
 
 	[
 		["O", "B", "A", "M", "A"],
 		["W", "A", "S", "H", "I", "N", "G", "T", "O", "N"],
-		["B", "U", "S", "H"]
+		["B", "U", "S", "H"],
+		["G", "O", "R", "E"],
+		["T", "R", "U", "M", "P"],
+		["C", "L", "I", "N", "T", "O", "N"],
+		["R", "O", "O", "S", "E", "V", "E", "L", "T"],
+		["W", "I", "L", "S", "O", "N"],
+		["J", "A", "C", "K", "S", "O", "N"],
+		["R", "E", "A", "G", "A", "N"],
+		["L", "I", "N", "C", "O", "L", "N"],
+		["T", "R", "U", "M", "A", "N"],
+		["J", "E", "F", "F", "E", "R", "S", "O", "N"],
+		["E", "I", "S", "E", "N", "H", "O", "W", "E", "R"],
+		["K", "E", "N", "N", "E", "D", "Y"],
+		["M", "A", "D", "I", "S", "O", "N"]
 	],
 
 	[
@@ -35,6 +86,24 @@ const dictionary = [
 		["C", "+", "+"],
 		["P", "Y", "T", "H", "O", "N"],
 		["L", "I", "S", "P"]
+		["P", "E", "R", "L"],
+		["R", "U", "B", "Y"],
+		["P", "H", "P"],
+		["H", "A", "C", "K"],
+		["F", "O", "R", "T", "R", "A", "N"],
+		["C"],
+		["R"],
+		["C", "#"],
+		["O", "B", "J", "E", "C", "T", "I", "V", "E", "-", "C"],
+		["S", "W", "F", "I", "T"],
+		["L", "U", "A"],
+		["S", "Q", "L"],
+		["J", "A", "V", "A", "S", "C", "R", "I", "P", "T"],
+		["H", "T", "M", "L"],
+		["C", "S", "S"],
+		["A", "S", "S", "E", "M", "B", "L", "Y"]
+
+
 	]
 ]
 
@@ -70,22 +139,27 @@ let spaces = [];	// an array to hold underscored spaces
 let chosen;
 let answer = "";
 let count = 0;
-
+let choseCategory = false;
 
 
 
 function chooseCategory(num){
-	let random = Math.floor((Math.random()*(dictionary[num].length)));
-	chosen = dictionary[num][random];
-	spaces = Array(chosen.length);
-	for (let i = 0; i < spaces.length; i++){
-		spaces[i] = "_ ";
+	if(choseCategory===true){
+		window.alert("You already chose a category!")
+	}else{
+		let random = Math.floor((Math.random()*(dictionary[num].length)));
+		chosen = dictionary[num][random];
+		spaces = Array(chosen.length);
+		for (let i = 0; i < spaces.length; i++){
+			spaces[i] = "_ ";
+		}
+		for (let i = 0; i < chosen.length; i++){
+			answer += chosen[i];
+		}
+		choseCategory = true;
+		printTries();
+		printspaces();
 	}
-	for (let i = 0; i < chosen.length; i++){
-		answer += chosen[i];
-	}
-	printTries();
-	printspaces();
 }
 
 function guessAnswer(){
@@ -106,8 +180,10 @@ function guessAnswer(){
 
 function printTries(){
 	let tries = document.getElementById("tries");
-	let text_node = document.createTextNode("You have 6 tries, good luck!");
+
+	let text_node = document.createTextNode("You have 6 lives, good luck!");
 	tries.appendChild(text_node);
+	
 }
 
 // prints the guessfield
