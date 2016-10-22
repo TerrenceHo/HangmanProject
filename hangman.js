@@ -85,7 +85,7 @@ const dictionary = [
 		["J", "A", "V", "A"],
 		["C", "+", "+"],
 		["P", "Y", "T", "H", "O", "N"],
-		["L", "I", "S", "P"]
+		["L", "I", "S", "P"],
 		["P", "E", "R", "L"],
 		["R", "U", "B", "Y"],
 		["P", "H", "P"],
@@ -163,6 +163,7 @@ function chooseCategory(num){
 }
 
 function guessAnswer(){
+	console.log('lmo');
 	let f = document.guess_form;
 	let b = f.elements["input_answer"];
 	let guess = b.value.toUpperCase();
@@ -176,6 +177,7 @@ function guessAnswer(){
 		hangman.src = "http://www.writteninpencil.de/Projekte/Hangman/hangman" + count + ".png";
 		window.alert("Wrong guess, try again!");
 	}
+	b.value = "";
 }
 
 function printTries(){
