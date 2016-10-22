@@ -27,7 +27,7 @@ input[type=button] {
 	-webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
 	!background-color: #4CAF50;
-	width: 120px;
+	width: 150px;
 	height: 30px;
 	display:inline-block;
 	font-family: 'Lato', sans-serif;
